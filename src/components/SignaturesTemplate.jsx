@@ -11,6 +11,7 @@ export const SignaturesTemplate = (props) => {
         <div className={`${mStyles}`}>
             {printSignature(signature1) && <p className={signatureStyle}>{`< ${signature1} >`}</p>}
             {props.children}
+            {/* {console.log(signature2)} */}
             {printSignature(signature2) && <p className={signatureStyle}>{`</ ${signature2 || signature1} >`}</p>}
         </div>
     )

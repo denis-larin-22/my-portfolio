@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 export const Scroll = () => {
     return (
         <div className="flex p-5 justify-between items-center max-[600px]:hidden">
-            {[1, 2].map(() => (
-                <div className="flex flex-col items-center justify-center">
-                    <p className="rotate-90 pr-[60px]">scroll down</p>
-                    {[1, 2, 3].map(() => <motion.svg
+            {[1, 2].map((index) => (
+                <div key={index} className="flex flex-col items-center justify-center">
+                    <p className="rotate-90 pr-[60px] text-[1rem] font-normal leading-normal">scroll down</p>
+                    {[1, 2, 3].map((index) => <motion.svg
+                        key={index}
                         width="23"
                         height="22"
                         viewBox="0 0 23 22"
