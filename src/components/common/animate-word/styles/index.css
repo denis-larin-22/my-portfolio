@@ -1,0 +1,27 @@
+.svg-word {
+	max-height: 130px;
+	width: 100%;
+}
+.text {
+	width: fit-content;
+	animation: stroke 3s alternate;
+	stroke-width: 1;
+    fill: white;
+}
+
+.text_delay {
+	animation-delay: 2s;
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(0,255,0,0); stroke: rgba(0,255,0,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 0.5;
+	}
+	70%  {fill: rgba(0,255,0,0); stroke: rgba(0,255,0,1); }
+	80%  {fill: rgba(0,255,0,0); stroke: rgba(0,255,0,1); stroke-width: 1; }
+	100% {
+		fill: rgb(255, 255, 255); stroke: rgba(0,255,0,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}

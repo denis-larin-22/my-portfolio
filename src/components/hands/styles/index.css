@@ -1,0 +1,18 @@
+.svg-container {
+    width: 500px;
+    height: auto;
+}
+
+.neon-pill {
+    display: inline-block;
+    height: 7%;
+    width: 15%;
+    border-radius: 50px;
+    background-color: rgb(237, 29, 29, 0.9);
+    box-shadow: inset 0px 0px 15em 8px rgb(237, 29, 29, 0.9), 0px 0px 2em 0px rgb(237, 29, 29, 0.9);
+}
+
+.neon-pill_blue {
+    background-color: #3F51B5;
+    box-shadow: inset 0px 0px 15em 8px #3F51B5, 0px 0px 2em 0px #3F51B5;
+}

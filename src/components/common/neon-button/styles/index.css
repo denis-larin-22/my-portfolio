@@ -1,0 +1,103 @@
+:root {
+  --green: #0F0;
+}
+
+.btn {
+    position: relative;
+    color: var(--green);
+    padding: 12px 26px;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .btn:hover {
+    background-color: var(--green);
+    box-shadow: 0 0 10px var(--green);
+    transform: scale(1.05);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+    color: #000000;
+  }
+  .btn__line {
+    position: absolute;
+    display: block;
+  }
+  .btn__line_top {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--green));
+  }
+  .btn__line_bottom {
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--green));
+  }
+  .btn__line_left {
+    top: 100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, var(--green));
+  }
+  .btn__line_right {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--green));
+  }
+  .btn:hover .btn__line_top {
+    left: 100%;
+    transition: 0.5s linear;
+    transition-delay: 0.15s;
+  }
+  .btn:hover .btn__line_bottom {
+    left: -100%;
+    transition: 0.5s linear;
+    transition-delay: 0.15s;
+  }
+  .btn:hover .btn__line_left {
+    top: -100%;
+    transition: 0.5s linear;
+    transition-delay: 0;
+  }
+  .btn:hover .btn__line_right {
+    top: 100%;
+    transition: 0.5s linear;
+    transition-delay: 0;
+  }
+  .btn__line {
+    position: absolute;
+    display: block;
+  }
+  .btn__line_top {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--green));
+  }
+  .btn__line_bottom {
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--green));
+  }
+  .btn__line_left {
+    top: 100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, var(--green));
+  }
+  .btn__line_right {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--green));
+  }

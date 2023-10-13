@@ -1,0 +1,7 @@
+.mrl-container {
+  position: fixed;
+  top: 0;
+  z-index: -10;
+  background-color: #1D1D1D;
+  filter: brightness(0.5);
+}
