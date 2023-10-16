@@ -17,7 +17,7 @@ export const Root = () => {
 
     return (
         <div className="overflow-x-hidden">
-            {/* <MatrixRainingLetters /> */}
+            <MatrixRainingLetters />
             <div className="container">
                 <Header />
             </div>
@@ -31,28 +31,5 @@ export const Root = () => {
             </div>
             <Footer />
         </div>
-
-        //КОШКА - СБОЙ В МАТРИЦЕ!!!!!!
-
-
-        // <div className="bg-dark min-h-screen" onMouseMove={handleMouseMove}>
-        // <div className="bg-dark" >
-        //     <SignaturesTemplate mStyles="container mx-auto" signature1={'body'} signature2={null}>
-        //         <div className="min-h-full">
-        //             <Header />
-
-        //             <Main />
-
-        //         </div>
-        //     </SignaturesTemplate>
-        //     <Scroll />
-        //     <SignaturesTemplate mStyles="container mx-auto" signature1={null} signature2={'body'}>
-        //         <Works />
-        //         <About />
-        //         <Footer />
-        //     </SignaturesTemplate>
-
-        //     {/* <FollowCursorCircle x={position.x} y={position.y} /> */}
-        // </div>
     )
 }
