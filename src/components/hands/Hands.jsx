@@ -24,7 +24,7 @@ export const Hands = () => {
     }
 
     return (
-        <motion.section ref={ref} className="mt-[200px] pb-[100px] flex items-center justify-center gap-10">
+        <motion.section ref={ref} className="mt-[12em] pb-[6em] flex items-center justify-center gap-10">
             <div className="relative svg-container">
                 {/* Pillow */}
                 <motion.span

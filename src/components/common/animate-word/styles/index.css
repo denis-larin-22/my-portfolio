@@ -1,5 +1,11 @@
 .svg-word {
 	max-height: 130px;
+	@media (max-width: 768px) {
+		max-height: 100px;
+	};
+	@media (max-width: 510px) {
+		max-height: 85px;
+	};
 	width: 100%;
 }
 .text {

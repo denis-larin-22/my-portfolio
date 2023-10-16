@@ -5,7 +5,7 @@ export const Scroll = () => {
     return (
         <div className="hidden md:flex p-5 mt-5 justify-between items-center">
             {[1, 2, 3].map((index) => {
-                if (index === 2) return <Rabbit key={index} />
+                if (index === 2) return <Rabbit key={index} mStyles="absolute -top-[100%] right-[10%] max-w-fit" />
 
                 return (
                     <div key={index} className="flex flex-col items-center justify-center">

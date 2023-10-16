@@ -6,7 +6,7 @@ import { Main } from "./components/main/Main"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { Skills } from "./components/Skills"
-import { Projects } from "./components/projects/Projects"
+import { Projects } from "./components/projects/Projects";
 
 export const Root = () => {
     // const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -16,8 +16,8 @@ export const Root = () => {
     // };
 
     return (
-        <div className="overflow-x-hidden ">
-            <MatrixRainingLetters />
+        <div className="overflow-x-hidden">
+            {/* <MatrixRainingLetters /> */}
             <div className="container">
                 <Header />
             </div>

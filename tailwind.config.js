@@ -36,25 +36,29 @@ module.exports = {
       'aurore': ['La Belle Aurore', 'serif'],
     },
     fontSize: {
-      'signatures': ['1.25rem', {
+      'signatures': ['1.1em', {
         lineHeight: 'normal',
         fontWeight: '400'
       }],
-      'm-3xl': ['6rem', {
+      'm-3xl': ['5.3em', {
         lineHeight: '105%',
         fontWeight: 600
       }],
-      'm-2xl': ['5rem', {
+      'm-2xl': ['4.4em', { 
         lineHeight: '105%',
         fontWeight: 600,
       }],
-      'm-xl': ['3rem', {
+      'm-xl': ['2.7em', {
         lineHeight: 'normal',
-        fontWeight: '400'
+        fontWeight: 400
       }],
-      'm-md': ['1.2rem', {
+      'm-md': ['1em', {
         lineHeight: '164%',
-        fontWeight: '400'
+        fontWeight: 400
+      }],
+      'm-sm': ['0.9em', {
+        lineHeight: 'normal',
+        fontWeight: 400
       }]
     },
     extend: {

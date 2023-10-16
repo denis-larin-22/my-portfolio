@@ -5,11 +5,11 @@ export const ProjectCard = () => {
 
     return (
         <article
-            className="relative h-[400px] w-[350px] group overflow-hidden"
+            className="relative min-h-[400px] w-[280px] xsm:w-[300px] group overflow-hidden"
             style={{ backgroundImage: `url(${path})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
-            <div className="p-[20px] absolute -right-[100%] flex flex-col justify-between duration-200 group-hover:right-0 w-full h-full bg-transparent-black">
-                <h5 className="text-m-md font-bold uppercase">Project name</h5>
+            <div className="p-[20px] absolute -right-[100%] flex flex-col justify-evenly sm:justify-between duration-200 group-hover:right-0 w-full h-full bg-transparent-black text-m-md sm:text-m-sm">
+                <h5 className=" font-bold uppercase">Project name</h5>
                 <p className="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem esse expedita suscipit ipsa. Veniam omnis iusto, beatae nulla quasi corrupti delectus quo corporis possimus, voluptate laboriosam quis unde cum fuga.</p>
                 <p className="font-bold">Technologies</p>
                 <ul className="flex gap-x-2">

@@ -1,38 +1,60 @@
 import { CallIcon, GitIcon, LinkedInIcon, MailIcon, SmartPhoneIcon, TelegramIcon } from "../common";
 import { InputForm } from "./InputForm";
 
+const ContactLinks = () => {
+    const contactLinks = [{ icon: <LinkedInIcon />, link: '/' }, { icon: <GitIcon />, link: '/' }, { icon: <TelegramIcon />, link: '/' }];
+
+    return (
+        <div className="p-[5px] flex items-center gap-x-[8px] bg-black rounded-full w-fit">
+            {contactLinks.map((item, index) => (
+                <a key={index} href={item.link} className="">{item.icon}</a>
+            ))}
+        </div>
+    )
+}
+
 export const Feedback = () => {
-    const contactLinks = [{ icon: <LinkedInIcon />, link: '/' }, { icon: <GitIcon />, link: '/' }, { icon: <TelegramIcon />, link: '/' }]
+    const contactList = [
+        { header: 'Gmail', text: 'denislarin2017@gmail.com', icon: <MailIcon /> },
+        { header: 'Phone', text: '+380 98 126 85 08', icon: <CallIcon /> },
+        { header: 'Connecting', text: <ContactLinks />, icon: <SmartPhoneIcon /> }
+    ]
+
 
     return (
         <section id="contact" className="flex flex-col items-center  my-4">
-            <ul className="flex gap-8">
-                <li className="min-w-[200px] bg-green text-black font-bold p-[25px] flex flex-col gap-y-2 items-center rounded-t-3xl duration-200 hover:scale-110">
-                    <div className="h-[40px] w-[40px] flex items-center justify-center rounded-full bg-black">
-                        <MailIcon />
-                    </div>
-                    <p className="text-m-md font-bold">Gmail</p>
-                    <p className="">denislarin2017@gmail.com</p>
-                </li>
-                <li className="min-w-[200px] bg-green text-black font-bold p-[25px] flex flex-col gap-y-2 items-center rounded-t-3xl duration-200 hover:scale-110">
-                    <div className="h-[40px] w-[40px] flex items-center justify-center rounded-full bg-black">
-                        <CallIcon />
-                    </div>
-                    <p className="text-m-md font-bold">Phone</p>
-                    <p className="">+380 98 126 85 08</p>
-                </li>
-                <li className="min-w-[200px] bg-green text-black font-bold p-[25px] flex flex-col gap-y-2 items-center rounded-t-3xl duration-200 hover:scale-110">
-                    <div className="h-[40px] w-[40px] flex items-center justify-center rounded-full bg-black">
-                        <SmartPhoneIcon />
-                    </div>
-                    <p className="text-m-md font-bold">Connecting</p>
-                    <div className="p-[5px] flex items-center gap-x-[8px] bg-black rounded-full w-fit">
-                        {contactLinks.map((item, index) => (
-                            <a key={index} href={item.link} className="">{item.icon}</a>
-                        ))}
-                    </div>
-                </li>
+            <ul className="hidden lg:flex gap-8">
+                {contactList.map((item, index) => (
+                    <li key={index} className="min-w-[200px] bg-green text-black font-bold p-[25px] flex flex-col gap-y-2 items-center rounded-t-3xl duration-200 hover:scale-110">
+                        <div className="h-[3em] w-[3em] flex items-center justify-center rounded-full bg-black">
+                            {item.icon}
+                        </div>
+                        <p className="text-m-md font-bold">{item.header}</p>
+                        {item.text}
+                    </li>
+                ))}
             </ul>
+
+            <ul className="flex flex-col-reverse gap-y-3 lg:hidden bg-green text-black p-[20px] items-center rounded-t-3xl">
+                {contactList.map((item, index) => {
+                    if (item.header === 'Connecting') return (
+                        <li key={index}>
+                            {item.text}
+                        </li>
+                    )
+
+                    return (
+                        <li key={index} className="flex items-center gap-3 font-bold">
+                            <div className="h-[3em] w-[3em] flex items-center justify-center rounded-full bg-black">
+                                {item.icon}
+                            </div>
+                            {item.text}
+                        </li>
+                    )
+                })}
+
+            </ul>
+
             <InputForm />
 
 

@@ -36,8 +36,8 @@ export const Skills = () => {
     };
 
     return (
-        <section id="skills" ref={ref} className="min-h-screen flex flex-col xsm:flex-row justify-center xsm:justify-between items-center xsm:items-start lg:items-center">
-            <motion.div style={getInView('0.5s')} className="self-start">
+        <section id="skills" className="min-h-fit sm:min-h-screen mt-[12em] flex flex-col xsm:flex-row justify-center xsm:justify-between items-center xsm:items-start lg:items-center">
+            <motion.div style={getInView('0.4s')} className="self-start">
                 <SignaturesTemplate signature1='h3'>
                     <h3 className="text-m-2xl text-light-green">Skills</h3>
                 </SignaturesTemplate>
@@ -58,7 +58,7 @@ export const Skills = () => {
                     </motion.ul>
                 </SignaturesTemplate>
             </motion.div>
-            <motion.div className="" style={getInView('0.7s')}>
+            <motion.div ref={ref} className="" style={getInView('0.5s')}>
                 <motion.ul
                     className="min-w-[200px] grid grid-cols-2 xsm:block text-m-md uppercase"
                     variants={containerVariants}

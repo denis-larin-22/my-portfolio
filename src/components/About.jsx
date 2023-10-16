@@ -14,7 +14,7 @@ export const About = () => {
     })
 
     return (
-        <article id="about" ref={ref} className="min-h-screen flex flex-col max-w-[900px]">
+        <article id="about" ref={ref} className="min-h-fit sm:min-h-screen flex flex-col max-w-[900px]">
             <motion.div style={getInView('0.5s')}>
                 <SignaturesTemplate signature1={'h2'}>
                     <h3 className="text-m-2xl text-green">About me</h3>
