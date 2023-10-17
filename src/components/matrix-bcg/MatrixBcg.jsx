@@ -1,7 +1,5 @@
-import './style/index.css';
 import React from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const renderMatrix = (ref, color) => {
     let canvas = ref.current;
@@ -51,10 +49,10 @@ const renderMatrix = (ref, color) => {
     return render;
 };
 
-const MatrixRainingLetters = (props) => {
+export const MatrixRainingLetters = (props) => {
     const ref = useRef();
     const keyName = "mrl-" + props.key;
-    const thisClassName = "mrl-container " + props.custom_class;
+    const thisClassName = "fixed top-0 -z-10 bg-[#1D1D1D] brightness-50" + props.custom_class;
 
     useEffect(() => {
         const render = renderMatrix(ref, props.color);
@@ -66,5 +64,3 @@ const MatrixRainingLetters = (props) => {
         <canvas key={keyName} className={thisClassName} ref={ref} />
     );
 };
-
-export default MatrixRainingLetters;

@@ -1,5 +1,5 @@
 import { Scroll } from "./Scroll";
-import { SignaturesTemplate } from "../SignaturesTemplate";
+import { SignaturesTemplate } from "../common/signatures/SignaturesTemplate";
 import { motion } from "framer-motion";
 import { WordAnimate } from "../common/animate-word/WordAnimate";
 import './styles/index.css';

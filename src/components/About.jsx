@@ -1,7 +1,6 @@
 import { useRef } from "react";
-import { SignaturesTemplate } from "./SignaturesTemplate";
 import { motion, useInView } from "framer-motion";
-import { NeonLink } from "./common";
+import { NeonLink, SignaturesTemplate } from "./common";
 
 export const About = () => {
     //Animation
@@ -11,7 +10,7 @@ export const About = () => {
         transform: isInView ? "translateY(0)" : "translateY(100px)",
         opacity: isInView ? 1 : 0,
         transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay}`,
-    })
+    });
 
     return (
         <article id="about" ref={ref} className="min-h-fit sm:min-h-screen flex flex-col max-w-[900px]">
@@ -21,14 +20,20 @@ export const About = () => {
                 </SignaturesTemplate>
             </motion.div>
 
-            <SignaturesTemplate mStyles={'flex flex-col text-m-md'} signature1={'p'}>
-                <motion.p style={getInView('0.7s')} >I’m a <span className="font-bold">Front-End Developer</span> located in Ukraine. I have
+            <SignaturesTemplate mStyles="flex flex-col text-m-md" signature1={'p'}>
+                <motion.p style={getInView('0.7s')} >
+                    I’m a <span className="font-bold">Front-End Developer</span> located in Ukraine. I have
                     a serious passion for UI effects, animations and
-                    creating intuitive, dynamic user experiences.</motion.p>
-                <motion.p style={getInView('0.9s')} className="py-[20px]">Well-organised person, problem solver, independent
-                    employee with high attention to detail.</motion.p>
-                <motion.p style={getInView('1.1s')} >Interested in the entire frontend spectrum and
-                    working on ambitious projects with positive people.</motion.p>
+                    creating intuitive, dynamic user experiences.
+                </motion.p>
+                <motion.p style={getInView('0.9s')} className="py-[20px]">
+                    Well-organised person, problem solver, independent
+                    employee with high attention to detail.
+                </motion.p>
+                <motion.p style={getInView('1.1s')}>
+                    Interested in the entire frontend spectrum and
+                    working on ambitious projects with positive people.
+                </motion.p>
             </SignaturesTemplate>
 
             <motion.div style={getInView('1.2s')} className="mt-[20px] flex gap-4">

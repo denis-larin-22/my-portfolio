@@ -9,7 +9,7 @@ export const Scroll = () => {
 
                 return (
                     <div key={index} className="flex flex-col items-center justify-center">
-                        <p className="rotate-90 pr-[60px] text-[1rem] font-normal leading-normal">follow me</p>
+                        <p className="rotate-90 pr-[60px] text-m-md">follow me</p>
                         {[1, 2, 3].map((index) => <motion.svg
                             key={index}
                             width="23"

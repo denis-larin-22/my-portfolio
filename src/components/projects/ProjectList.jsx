@@ -1,13 +1,37 @@
+import { BootstrapIcon, CssIcon, FirebaseIcon, HtmlIcon, NextUiIcon, ReactIcon, ReduxIcon, SassIcon, TailwindCssIcon } from "../common/icons/technologies";
 import { ProjectCard } from "./ProjectCard";
 
 export const ProjectList = () => {
-    const list = [{ name: 'HILLEL', text: 'Final work for basic course', link: 'https://github.com/denis-larin-22/hlegal_final_hillel_project' }, { name: 'HILLEL', text: 'Final work for basic course', link: 'https://github.com/denis-larin-22/hlegal_final_hillel_project' }, { name: 'HILLEL', text: 'Final work for basic course', link: 'https://github.com/denis-larin-22/hlegal_final_hillel_project' }]
+    const odinsLogo = process.env.PUBLIC_URL + '/assets/odin`s-logo-white.svg';
+    const hlegalLogo = process.env.PUBLIC_URL + '/assets/hlegal.svg';
+
+    const list = [
+        {
+            name: 'Odin`s shoes', logo: odinsLogo, text: 'Website catalog of an assortment of shoes from the manufacturer of the trademark "Odin`s shoes"', link: 'https://github.com/denis-larin-22/odins-store/tree/main',
+            technologies: [
+                { icon: <ReactIcon />, link: "https://react.dev/" },
+                { icon: <ReduxIcon />, link: "https://redux.js.org/" },
+                { icon: <FirebaseIcon />, link: "https://firebase.google.com/" },
+                { icon: <TailwindCssIcon />, link: "https://tailwindcss.com/" },
+                { icon: <NextUiIcon />, link: "https://nextui.org/" },
+            ]
+        },
+        {
+            name: 'Hlegal', logo: hlegalLogo, text: 'Final hillel school project. Layout using elements from Bootstrap and using the CSS preprocessor."', link: 'https://github.com/denis-larin-22/hlegal_final_hillel_project',
+            technologies: [
+                { icon: <HtmlIcon />, link: "https://uk.wikipedia.org/wiki/HTML5" },
+                { icon: <CssIcon />, link: "https://uk.wikipedia.org/wiki/CSS" },
+                { icon: <SassIcon />, link: "https://sass-lang.com/" },
+                { icon: <BootstrapIcon />, link: "https://getbootstrap.com/" }
+            ]
+        },
+    ]
 
     return (
         <ul className="flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center mt-[120px]">
-            {list.map((item, index) => (
+            {list.map((project, index) => (
                 <li key={index}>
-                    <ProjectCard value={item} />
+                    <ProjectCard project={project} />
                 </li>
             ))}
         </ul>
