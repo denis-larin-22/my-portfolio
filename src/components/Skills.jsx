@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { SignaturesTemplate } from "./common/signatures/SignaturesTemplate";
 
 export const Skills = () => {
-    const skills = ['html', 'css', 'JavaScript', 'es5/es6', 'react js', 'redux', 'rest', 'sass', 'npm', 'tailwind css', 'material ui', 'bootstrap', 'git', 'framer motion']
+    const skills = ['html', 'css', 'JavaScript', 'es5/es6', 'TypeScript', 'react js', 'redux', 'rest', 'sass', 'npm', 'tailwind css', 'next ui', 'material ui', 'bootstrap', 'git', 'framer motion']
     const icons = [
         { icon: <HtmlIcon />, link: 'https://uk.wikipedia.org/wiki/HTML5' },
         { icon: <CssIcon />, link: 'https://ru.wikipedia.org/wiki/CSS' },
@@ -43,8 +43,8 @@ export const Skills = () => {
     };
 
     return (
-        <section id="skills" className="min-h-fit sm:min-h-screen flex flex-col xsm:flex-row justify-center xsm:justify-between items-center xsm:items-start lg:items-center">
-            <motion.div style={getInView('0.5s')} className="self-start">
+        <section id="skills" className="mt-9 md:mt-0 min-h-fit sm:min-h-screen flex flex-col xsm:flex-row justify-center xsm:justify-between items-center xsm:items-start ">
+            <motion.div style={getInView('0.5s')} className="self-center sm:self-start">
                 <SignaturesTemplate signature1='h3'>
                     <h3 className="text-m-2xl text-light-green">Skills</h3>
                 </SignaturesTemplate>
@@ -68,13 +68,13 @@ export const Skills = () => {
 
             <motion.ul
                 ref={ref}
-                className="min-w-[200px] grid grid-cols-2 xsm:block text-m-md uppercase"
+                className="m-0 lg:mt-32 min-w-[200px] grid grid-cols-2 xsm:block text-m-md uppercase"
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? 'visible' : 'none'}
             >
                 {skills.map((skill, index) => (
-                    <motion.li key={index} variants={itemVariants} className="text-grey duration-100 hover:text-white hover:border-l-4 hover:border-green hover:pl-3 cursor-default">
+                    <motion.li key={index} variants={itemVariants} className="text-grey duration-100 hover:text-white hover:border-l-4 hover:border-green hover:pl-3">
                         {skill}
                     </motion.li>
                 ))}

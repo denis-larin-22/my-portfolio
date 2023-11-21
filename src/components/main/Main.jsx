@@ -8,6 +8,7 @@ import { Rabbit } from "./Rabbit";
 
 export const Main = () => {
     //Text
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const keyWords = ['matrix', 'matrix', 'js', 'ts', 'react', 'web'];
     const greetings = ['Hi,', 'I`m Denis', 'web', 'developer'];
     //Framer animation

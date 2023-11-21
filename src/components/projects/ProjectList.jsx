@@ -1,9 +1,10 @@
-import { BootstrapIcon, CssIcon, FirebaseIcon, HtmlIcon, NextUiIcon, ReactIcon, ReduxIcon, SassIcon, TailwindCssIcon } from "../common/icons/technologies";
+import { BootstrapIcon, CssIcon, FirebaseIcon, HtmlIcon, NextUiIcon, ReactIcon, ReduxIcon, SassIcon, TailwindCssIcon, TsIcon } from "../common/icons/technologies";
 import { ProjectCard } from "./ProjectCard";
 
 export const ProjectList = () => {
     const odinsLogo = process.env.PUBLIC_URL + '/assets/odin`s-logo-white.svg';
     const hlegalLogo = process.env.PUBLIC_URL + '/assets/hlegal.svg';
+    const asmrLogo = process.env.PUBLIC_URL + '/assets/ASMR_app.svg';
 
     const list = [
         {
@@ -23,6 +24,15 @@ export const ProjectList = () => {
                 { icon: <CssIcon />, link: "https://uk.wikipedia.org/wiki/CSS" },
                 { icon: <SassIcon />, link: "https://sass-lang.com/" },
                 { icon: <BootstrapIcon />, link: "https://getbootstrap.com/" }
+            ]
+        },
+        {
+            name: 'ASMR-App', logo: asmrLogo, text: 'A set of ASMR sounds for rest, relaxation and sleep with the ability to mix sounds', link: 'https://github.com/denis-larin-22/ASMR_App',
+            technologies: [
+                { icon: <ReactIcon />, link: "https://react.dev/" },
+                { icon: <TsIcon />, link: "https://www.typescriptlang.org/" },
+                { icon: <ReduxIcon />, link: "https://redux.js.org/" },
+                { icon: <TailwindCssIcon />, link: "https://tailwindcss.com/" },
             ]
         },
     ]

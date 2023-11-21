@@ -3,10 +3,12 @@ export const ProjectCard = ({ project }) => {
 
     return (
         <article
-            className="relative min-h-[400px] w-[280px] xsm:w-[300px] group overflow-hidden"
+            className="relative min-h-[400px] w-[280px] xsm:w-[300px] group overflow-hidden grayscale hover:grayscale-0 hover:shadow-card rounded-xl duration-1000"
             style={{
-                backgroundImage: `url(${logo})`, backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat', backgroundPosition: 'center'
+                backgroundImage: `url(${logo})`,
+                backgroundSize: '200px',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
             }}
         >
             <div className="p-[20px] absolute -right-[100%] flex flex-col justify-evenly sm:justify-between duration-200 group-hover:right-0 w-full h-full bg-transparent-black text-m-md sm:text-m-sm">
@@ -24,9 +26,9 @@ export const ProjectCard = ({ project }) => {
                         ))}
                     </ul>
                 </div>
-                <a href={link} target="_blank" rel="noreferrer" className="group/button relative w-[130px] h-[50px] pt-[11px] pl-[20px] overflow-hidden">
+                <a href={link} target="_blank" rel="noreferrer" className="group/button relative w-36 h-12 pt-[11px] px-4 overflow-hidden">
                     <span className="absolute top-0 -left-[90%] group-hover/button:left-0 z-0 inline-block w-full h-full group-hover/button:w-full duration-200 bg-green"></span>
-                    <span className="relative z-10 group-hover/button:text-black font-bold">Show more</span>
+                    <span className="relative z-10 group-hover/button:text-black font-bold">Open project</span>
                 </a>
             </div>
         </article>

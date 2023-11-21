@@ -37,18 +37,12 @@ export const Feedback = () => {
 
             <ul className="flex flex-col-reverse gap-y-3 lg:hidden bg-green text-black p-[20px] items-center rounded-t-3xl">
                 {list.map((item, index) => {
-                    if (item.header === 'Connecting') return (
-                        <li key={index}>
-                            {item.text}
-                        </li>
-                    )
-
                     return (
-                        <li key={index} className="flex items-center gap-3 font-bold">
+                        <li key={index} className="flex items-center self-start gap-3 font-bold">
                             <div className="h-[3em] w-[3em] flex items-center justify-center rounded-full bg-black">
                                 {item.icon}
                             </div>
-                            {item.text}
+                            {item.element}
                         </li>
                     )
                 })}
